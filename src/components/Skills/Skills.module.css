@@ -1,4 +1,4 @@
-.studyItem {
+.skillItem {
     display: flex;
     padding: 10px;
     border: 1px solid #eaeaea;
@@ -7,13 +7,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 230px;
 }
-
-.studyItem:hover {
+.skillItem:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.studyItemIcon {
+.skillItemIcon {
     padding: var(--mantine-spacing-xs);
     margin-right: var(--mantine-spacing-md);
 }

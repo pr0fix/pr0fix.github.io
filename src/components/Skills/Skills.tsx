@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Studies.module.css";
+import classes from "./Skills.module.css";
 import {
   Container,
   Text,
@@ -9,18 +9,19 @@ import {
   Tooltip,
 } from "@mantine/core";
 
-type StudyItem = {
+type SkillItem = {
   image: string;
   title: string;
   description: string;
 };
 
-const data: StudyItem[] = [
+const data: SkillItem[] = [
   {
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    title: "TypeScript",
-    description: "A superset of JavaScript that adds static types.",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    title: "React",
+    description:
+      "A framework",
   },
   {
     image:
@@ -30,26 +31,26 @@ const data: StudyItem[] = [
   },
   {
     image:
-      "https://img.icons8.com/?size=100&id=mgwdEllRedYT&format=png&color=000000",
-    title: "Artificial Intelligence",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    title: "Python",
     description: "The simulation of human intelligence in machines.",
   },
   {
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    title: "React Native",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain-wordmark.svg",
+    title: "Java",
     description: "A framework for building mobile apps using React.",
   },
 ];
 
-const Studies: React.FC = () => {
+const Skills: React.FC = () => {
   const items = data.map((item) => (
     <Tooltip label={item.description} position="top" withArrow>
-      <div className={classes.studyItem} key={item.image}>
+      <div className={classes.skillItem} key={item.image}>
         <ThemeIcon
           gradient={{ from: "#8b45d2", to: "#3995d0" }}
           variant="gradient"
-          className={classes.studyItemIcon}
+          className={classes.skillItemIcon}
           size={60}
           radius="md"
         >
@@ -77,4 +78,4 @@ const Studies: React.FC = () => {
   );
 };
 
-export default Studies;
+export default Skills;

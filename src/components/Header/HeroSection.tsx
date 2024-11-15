@@ -2,11 +2,12 @@ import { Container, Text } from "@mantine/core";
 import classes from "./HeroSection.module.css";
 import React from "react";
 import Studies from "../Studies/Studies";
+import Skills from "../Skills/Skills";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className={classes.wrapper}>
-      <Container size={800} className={classes.inner}>
+    <div>
+      <Container size={800}>
         <h1 className={classes.title}>
           I'm Jani, <br />
           <Text
@@ -19,17 +20,18 @@ const HeroSection: React.FC = () => {
             Full-Stack Developer
           </Text>{" "}
         </h1>
+        <div className={classes.languagesContainer}>
+          <Text className={classes.description} c="dimmed">
+            I'm familiar with:
+          </Text>
+          <Skills />
 
-        <Text className={classes.description} c="dimmed">
-          I'm proficient in:
-        </Text>
-        {/* <Skills/> */}
+          <Text className={classes.description} c="dimmed">
+            I'm currently learning:
+          </Text>
 
-        <Text className={classes.description} c="dimmed">
-          I'm currently studying:
-        </Text>
-
-        <Studies />
+          <Studies />
+        </div>
       </Container>
     </div>
   );
