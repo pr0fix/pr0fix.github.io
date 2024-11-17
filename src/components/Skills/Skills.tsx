@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./Skills.module.css";
 import {
-  Container,
   Text,
   ThemeIcon,
   SimpleGrid,
   Image,
   Tooltip,
+  Container,
 } from "@mantine/core";
 
 type SkillItem = {
@@ -20,26 +20,25 @@ const data: SkillItem[] = [
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     title: "React",
-    description:
-      "A framework",
+    description: "Developed web applications with React, including this portfolio.",
   },
   {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
     title: "Node.js",
-    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    description: "Built RESTful and GraphQL APIs using Node.js and Express.",
   },
   {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     title: "Python",
-    description: "The simulation of human intelligence in machines.",
+    description: "Completed a course on python programming and fiddled with machine learning using PyTorch",
   },
   {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain-wordmark.svg",
     title: "Java",
-    description: "A framework for building mobile apps using React.",
+    description: "Created full-stack applications with Spring Boot and Thymeleaf",
   },
 ];
 
@@ -66,11 +65,15 @@ const Skills: React.FC = () => {
   ));
 
   return (
-    <Container size={700}>
+    <Container>
+      <Text className={classes.title} c="white">
+        I'm familiar with:
+      </Text>
+
       <SimpleGrid
         cols={{ xs: 1, sm: 2, md: 2, lg: 2, xl: 2 }}
-        spacing={50}
-        mt={30}
+        spacing={30}
+        mt={20}
       >
         {items}
       </SimpleGrid>

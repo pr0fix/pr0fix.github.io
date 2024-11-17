@@ -6,32 +6,20 @@ import Skills from "../Skills/Skills";
 
 const HeroSection: React.FC = () => {
   return (
-    <div>
-      <Container size={800}>
-        <h1 className={classes.title}>
+    <div className={classes.wrapper}>
+      <Container className={classes.container}>
+        <h1 className={classes.header}>
           I'm Jani, <br />
           <Text
             component="span"
             variant="gradient"
-            gradient={{ from: "purple", to: "blue" }}
+            gradient={{ from: "purple", to: "blue", deg: 130 }}
             inherit
           >
             A Student & <br />
             Full-Stack Developer
-          </Text>{" "}
+          </Text>
         </h1>
-        <div className={classes.languagesContainer}>
-          <Text className={classes.description} c="dimmed">
-            I'm familiar with:
-          </Text>
-          <Skills />
-
-          <Text className={classes.description} c="dimmed">
-            I'm currently learning:
-          </Text>
-
-          <Studies />
-        </div>
       </Container>
     </div>
   );

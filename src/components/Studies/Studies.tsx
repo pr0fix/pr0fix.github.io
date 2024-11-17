@@ -20,25 +20,25 @@ const data: StudyItem[] = [
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     title: "TypeScript",
-    description: "A superset of JavaScript that adds static types.",
+    description: "Learning to use TypeScript in projects to ensure better type safety.",
   },
   {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
     title: "Node.js",
-    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    description: "Integrating OpenAI models to Node.js Express applications.",
   },
   {
     image:
       "https://img.icons8.com/?size=100&id=mgwdEllRedYT&format=png&color=000000",
     title: "Artificial Intelligence",
-    description: "The simulation of human intelligence in machines.",
+    description: "Learning about integrating AI models into web applications.",
   },
   {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     title: "React Native",
-    description: "A framework for building mobile apps using React.",
+    description: "Currently building a coffee-themed full-stack mobile application.",
   },
 ];
 
@@ -65,11 +65,14 @@ const Studies: React.FC = () => {
   ));
 
   return (
-    <Container size={700}>
+    <Container>
+      <Text className={classes.title} c="white">
+        I'm currently learning:
+      </Text>
       <SimpleGrid
         cols={{ xs: 1, sm: 2, md: 2, lg: 2, xl: 2 }}
-        spacing={50}
-        mt={30}
+        spacing={30}
+        mt={20}
       >
         {items}
       </SimpleGrid>
