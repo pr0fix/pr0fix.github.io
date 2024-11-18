@@ -1,0 +1,41 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactLink {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #f8f8f2;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 0.85;
+    transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+    color: #3995d0;
+}
+
+.flippedLink {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .section {
+        gap: 0.25rem;
+    }
+
+    .contactLink {
+        font-size: 1.25rem;
+        padding: 0.15rem 0;
+    }
+}

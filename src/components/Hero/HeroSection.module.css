@@ -1,0 +1,35 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    color: white;
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 900;
+    margin: 0;
+}
+
+.description {
+    color: #c1c2c5;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
