@@ -38,8 +38,8 @@ const CoffeeCompanion: React.FC = () => {
         <div className={classes.rightButton}></div>
         <div className={classes.screen}>
           <Carousel withControls>
-            {projectData.map((project, index) =>
-              project.screenshots.map((screenshot) => (
+            {projectData.map((project) =>
+              project.screenshots.map((screenshot, index) => (
                 <CarouselSlide key={index}>
                   <img src={screenshot} alt="asd" />
                 </CarouselSlide>
