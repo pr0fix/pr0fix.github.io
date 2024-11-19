@@ -4,9 +4,10 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: transparent;
+    background-color: #0b0d10;
     overflow: hidden;
     pointer-events: none;
+    z-index: -1;
 }
 .star {
     position: absolute;

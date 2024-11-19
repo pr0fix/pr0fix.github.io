@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   background-color: #0b0d10;
@@ -12,10 +16,9 @@
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  z-index: 1;
 }
 
 .section {
     height: 100vh;
-    scroll-snap-align: start;
 }

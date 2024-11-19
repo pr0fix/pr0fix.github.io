@@ -10,8 +10,8 @@ import Stars from "./components/Stars/Stars";
 const App = () => {
   return (
     <MantineProvider>
-        <Stars/>
-      <div className="sections" style={{ background: "#0b0d10" }}>
+      <Stars />
+      <div className="sections">
         <motion.section
           className="section"
           initial={{ opacity: 0, x: -500 }}
@@ -28,8 +28,6 @@ const App = () => {
         <motion.div className="section">
           <CoffeeCompanion />
         </motion.div>
-
-
       </div>
     </MantineProvider>
   );
