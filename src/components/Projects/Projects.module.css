@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.title {
+    color: white;
+    font-size: 26px;
+}
+
+.mockupContainer {
+    position: relative;
+    margin-inline: auto;
+    background-color: #1f2937;
+    border: 14px solid #1f2937;
+    border-radius: 2.5rem;
+    height: 600px;
+    width: 300px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+.leftButtonFirst,
+.leftButtonSecond {
+    position: absolute;
+    height: 46px;
+    width: 3px;
+    background-color: #1f2937;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.leftButtonFirst {
+    top: 124px;
+    left: -17px;
+}
+
+.leftButtonSecond {
+    top: 178px;
+    left: -17px;
+}
+
+.rightButton {
+    position: absolute;
+    height: 64px;
+    width: 3px;
+    background-color: #1f2937;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    top: 142px;
+    right: -17px;
+}
+
+.screen {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 272px;
+    height: 572px;
+    background-color: white;
+}
+
+.screen img {
+    width: 272px;
+    height: 572px;
+}

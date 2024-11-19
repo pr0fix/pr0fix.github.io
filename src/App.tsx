@@ -4,10 +4,13 @@ import { MantineProvider } from "@mantine/core";
 import { motion } from "motion/react";
 import HeroSection from "./components/Hero/HeroSection";
 import Learning from "./components/Learning/Learning";
+import CoffeeCompanion from "./components/Projects/CoffeeCompanion";
+import Stars from "./components/Stars/Stars";
 
 const App = () => {
   return (
     <MantineProvider>
+        <Stars/>
       <div className="sections" style={{ background: "#0b0d10" }}>
         <motion.section
           className="section"
@@ -21,6 +24,12 @@ const App = () => {
         <motion.section className="section">
           <Learning />
         </motion.section>
+
+        <motion.div className="section">
+          <CoffeeCompanion />
+        </motion.div>
+
+
       </div>
     </MantineProvider>
   );

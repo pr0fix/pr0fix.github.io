@@ -7,7 +7,6 @@ import Links from "../Links/Links";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className={classes.wrapper}>
       <Container className={classes.container}>
         <Stack>
           <div className={classes.content}>
@@ -34,7 +33,7 @@ const HeroSection: React.FC = () => {
               />
             </motion.h1>
 
-            <Text className={classes.description} mt="xl">
+            <Text className={classes.description} mt="lg">
               Passionate about building modern web applications and exploring
               new technologies. Currently focused on full-stack development and
               AI integration.
@@ -46,7 +45,6 @@ const HeroSection: React.FC = () => {
           </div>
         </Stack>
       </Container>
-    </div>
   );
 };
 
