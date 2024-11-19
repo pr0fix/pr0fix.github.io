@@ -18,11 +18,11 @@ const projectData: ProjectItem[] = [
     description:
       "React Native mobile app where users can find, review and add coffee shops to favorites.",
     screenshots: [
-      "../screenshots/CoffeeCompanion/homepage.png",
-      "../screenshots/CoffeeCompanion/bottomsheet.png",
-      "../screenshots/CoffeeCompanion/profile_page.png",
-      "../screenshots/CoffeeCompanion/edit_profile.png",
-      "../screenshots/CoffeeCompanion/sign_up.png",
+      "images/homepage.png",
+      "images/bottomsheet.png",
+      "images/profile_page.png",
+      "images/edit_profile.png",
+      "images/sign_up.png",
     ],
     link: "https://github.com/pr0fix/CoffeeCompanion",
   },
