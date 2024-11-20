@@ -27,3 +27,9 @@ body {
   background: linear-gradient(45deg, #00d5ff, #5a1ff7);
   border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

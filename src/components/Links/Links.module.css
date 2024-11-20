@@ -36,5 +36,11 @@
         pointer-events: none;
         display: none;
     }
+    .contactLink {
+        transition: none;
+    }
+    .contactLink:hover {
+        color: #f8f8f2;
+    }
 }
 
