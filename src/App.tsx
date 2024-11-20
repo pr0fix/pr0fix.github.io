@@ -25,9 +25,9 @@ const App = () => {
           <Learning />
         </motion.section>
 
-        <motion.div className="section">
+        <motion.section className="section">
           <CoffeeCompanion />
-        </motion.div>
+        </motion.section>
       </div>
     </MantineProvider>
   );

@@ -1,40 +1,15 @@
-.container {
+.image {
     display: flex;
-    gap: 50px;
-    justify-content: center;
     align-items: center;
-    height: 100%;
-}
-
-.item {
-    display: flex;
-    padding: 10px;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px;
-    color: white;
-}
-
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.itemIcon {
-    padding: var(--mantine-spacing-xs);
-    margin-right: var(--mantine-spacing-md);
-}
-
-.titleContainer {
-    margin: 0;
-    padding: 0;
     justify-content: center;
-    align-content: center;
+    height: 100px;
+    background: linear-gradient(45deg, #1c7ed6, #8045e4);
 }
 
-.title {
-    font-size: 24px;
+.card {
+    transition: transform 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
