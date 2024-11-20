@@ -1,11 +1,12 @@
 import React from "react";
 import {
   Container,
+  Title,
   SimpleGrid,
-  Text,
-  ThemeIcon,
-  Tooltip,
+  Card,
   Image,
+  Text,
+  Box,
 } from "@mantine/core";
 import classes from "./Learning.module.css";
 
@@ -34,14 +35,14 @@ const skillsData: DataItem[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     title: "Python",
     description:
-      "Completed a course on python programming and fiddled with machine learning using PyTorch",
+      "Completed a Python Programming course by University of Helsinki.",
   },
   {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain-wordmark.svg",
     title: "Java",
     description:
-      "Created full-stack applications with Spring Boot and Thymeleaf",
+      "Created full-stack applications with Spring Boot and Thymeleaf.",
   },
 ];
 
@@ -74,52 +75,49 @@ const studiesData: DataItem[] = [
   },
 ];
 
-const Learning: React.FC = () => {
-  const renderItems = (data: any[]) => {
-    return data.map((item, index) => (
-      <Tooltip key={index} label={item.description} position="top" withArrow>
-        <div className={classes.item}>
-          <ThemeIcon
-            gradient={{ from: "#8b45d2", to: "#3995d0" }}
-            variant="gradient"
-            className={classes.itemIcon}
-            size={60}
-            radius="md"
-          >
-            <Image src={item.image} alt={item.title} />
-          </ThemeIcon>
-          <div className={classes.titleContainer}>
-            <Text fw={700} fz="lg">
-              {item.title}
-            </Text>
-          </div>
-        </div>
-      </Tooltip>
-    ));
-  };
-
+const LearningCard: React.FC<DataItem> = ({ image, title, description }) => {
   return (
-    <Container className={classes.container}>
-      <div>
-        <Text className={classes.title} c="white">
-          I'm familiar with:
-        </Text>
-        <SimpleGrid cols={2} spacing={30} mt={20}>
-          {renderItems(skillsData)}
-        </SimpleGrid>
-      </div>
-      <div>
-        <Text className={classes.title} c="white">
-          I'm currently learning:
-        </Text>
-        <SimpleGrid
-          cols={{ xs: 1, sm: 2, md: 2, lg: 2, xl: 2 }}
-          spacing={30}
-          mt={20}
-        >
-          {renderItems(studiesData)}
-        </SimpleGrid>
-      </div>
+    <Card padding="lg" radius="md" className={classes.card}>
+      <Card.Section>
+        <Box className={classes.image}>
+          <Image src={image} alt={title} width={60} height={60} />
+        </Box>
+      </Card.Section>
+
+      <Text fw={500} size="lg" mt="md">
+        {title}
+      </Text>
+
+      <Text size="sm" c="dimmed" mt="sm">
+        {description}
+      </Text>
+    </Card>
+  );
+};
+
+const LearningSection: React.FC<{ title: string; data: DataItem[] }> = ({
+  title,
+  data,
+}) => {
+  return (
+    <Box mb={50}>
+      <Title order={2} mb={20} c="white">
+        {title}
+      </Title>
+      <SimpleGrid cols={{ xl: 4, lg: 4, md: 2, sm: 1, xs: 1 }} spacing="lg">
+        {data.map((item, index) => (
+          <LearningCard key={index} {...item} />
+        ))}
+      </SimpleGrid>
+    </Box>
+  );
+};
+
+const Learning = () => {
+  return (
+    <Container fluid>
+      <LearningSection title="I'm familiar with:" data={skillsData} />
+      <LearningSection title="I'm currently learning:" data={studiesData} />
     </Container>
   );
 };
