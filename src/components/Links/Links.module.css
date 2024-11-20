@@ -14,7 +14,7 @@
     color: #f8f8f2;
     text-transform: uppercase;
     text-decoration: none;
-    line-height: 1;
+    line-height: 0.85;
     transition: color 0.3s ease;
 }
 
@@ -30,12 +30,11 @@
 }
 
 @media (max-width: 768px) {
-    .section {
-        gap: 0.25rem;
-    }
-
-    .contactLink {
-        font-size: 1.25rem;
-        padding: 0.15rem 0;
+    .flippedLink {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none;
     }
 }
+
