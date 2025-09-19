@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --main-bg-color: #bfd6ec;
+  --secondary-bg-color: #9fc5e8;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+.offset-border {
+  border-radius: 4px;
+  border-top: 2px solid #000000;
+  border-bottom: 6px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 6px solid #000000;
+}
