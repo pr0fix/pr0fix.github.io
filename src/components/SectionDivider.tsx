@@ -1,6 +1,4 @@
-interface SectionDividerProps {
-  title: string;
-}
+import type { SectionDividerProps } from "../utils/types";
 
 const SectionDivider: React.FC<SectionDividerProps> = ({
   title,

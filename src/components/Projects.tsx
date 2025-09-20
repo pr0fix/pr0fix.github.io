@@ -2,9 +2,9 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    imageUrl: "/match-a-cat.png",
+    imageUrl: "/match_a_cat.png",
     title: "Match-a-cat",
-    technologies: ["MERN Stack", "TypeScript", "zustand", "tailwindcss"],
+    technologies: ["MERN Stack", "TypeScript", "tailwindcss"],
     links: [
       {
         color: "#63a4ff",
@@ -41,7 +41,7 @@ const projects = [
   {
     imageUrl: "/caffeinated-strings.png",
     title: "caffenaited-strings",
-    technologies: ["JavaScript", "TypeScript", "ts-jest", "CI-CD Pipeline"],
+    technologies: ["JavaScript", "TypeScript", "ts-jest"],
     links: [
       {
         color: "#63a4ff",
@@ -61,9 +61,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="flex flex-row gap-5 justify-center">
-      {projects.map((project) => (
+    <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center">
+      {projects.map((project, index) => (
         <ProjectCard
+          key={index}
           imageUrl={project.imageUrl}
           title={project.title}
           technologies={project.technologies}

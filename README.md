@@ -10,4 +10,6 @@ This is my portfolio website.
 - **Vite**: For fast development and build.
 
 ## Images
+
 All images in the project cards are generated with [Nanobanana.ai](https://nanobanana.ai)
+Self-portrait was generated with Google Gemini Nanobanana addon
