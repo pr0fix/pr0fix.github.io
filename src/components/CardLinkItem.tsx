@@ -6,12 +6,14 @@ const CardLinkItem: React.FC<CardLinkItemProps> = ({
   linkUrl,
 }: CardLinkItemProps) => {
   return (
-    <div
-      className="border-[3px] rounded-xl py-[0.75rem] px-[1rem] font-bold text-sm"
-      style={{ backgroundColor: color }}
-    >
-      <a href={linkUrl}>{name}</a>
-    </div>
+    <a href={linkUrl} target="_blank">
+      <div
+        className="border-[3px] rounded-xl py-[0.75rem] px-[1rem] font-bold text-sm"
+        style={{ backgroundColor: color }}
+      >
+        {name}
+      </div>
+    </a>
   );
 };
 
