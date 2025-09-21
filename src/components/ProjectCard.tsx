@@ -9,7 +9,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   links,
 }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col gap-6 mt-5 bg-[var(--secondary-bg-color)] border-2 rounded-2xl p-6 max-w-[450px]">
+    <div className="flex flex-col gap-6 bg-[var(--secondary-bg-color)] border-2 rounded-2xl p-6 max-w-[450px]">
       <img src={imageUrl} className="rounded-md border-2" />
 
       <p className="font-bold text-lg shrink-0">{title}</p>
